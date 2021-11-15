@@ -1,0 +1,354 @@
+/*************************
+Designed by Hüseyin Altıntop
+2021
+**************************/
+/*general*/
+.koseli{border-radius: 0px !important;}
+.opacity-2{opacity: 0.2;}
+.opacity-3{opacity: 0.3;}
+.opacity-4{opacity: 0.4;}
+.opacity-5{opacity: 0.5;}
+.m-150{margin-top: 150px !important; margin-bottom: 150px !important;}
+.iki-yana-yasla{text-align:justify;}
+.prompt{font-family: 'Prompt', sans-serif;}
+.raleway{font-family: 'Raleway', sans-serif;}
+.bold{font-weight: bold;}
+.card{border: none !important;}
+/*header*/
+/*navbar*/
+.bg-dark{
+	transition: 0.4s;
+}
+@media (max-width: 600px) {
+	.navbar-brand {padding-left: 10px;}
+	.collapse{
+		margin-left: 0px;
+		padding: 0px;
+	}
+	.collapse a{margin: 0px;}
+	.collapse a:hover{
+		border-bottom: none;
+	}
+	.navbar{background-color: #000 !important;}
+	.slide{margin-top: 50px;}
+}
+@media (min-width: 630px) {
+	.navbar-brand {
+		padding-left: 10px;
+	}
+}
+@media (min-width: 980px) {
+	.navbar-brand {
+		padding-left: 10px;
+	}
+	.navbar-collapse{
+		margin-left: 150px;
+	}
+}
+@media (min-width: 1500px) {
+	.navbar-brand {
+		padding-left: 20rem;
+	}
+	.collapse{
+		margin-left: 10rem;
+		padding: 20px;
+	}
+	.collapse a{margin: 10px;}
+	.collapse a:hover{
+	border-bottom: 1px solid white;
+}
+}
+.navbar{
+	padding: 15px;
+	-webkit-transition: all .4s; // Chrome
+	-moz-transition: all .4s; // Mozilla
+	-o-transition: all .4s; // Opera
+	transition: all .4s;
+}
+.navbar a{
+	font-family: 'Prompt', sans-serif;
+	font-weight: bold;
+	color:#fff !important;
+}
+/*header end*/
+/*slider*/
+.carousel-caption{
+	text-align: center;
+	color: #dbd9d9 !important;
+	top: 50%;
+}
+.carousel-caption h1{
+	font-family: 'Prompt', sans-serif;
+	font-weight: bold;
+}
+.carousel-caption p{
+	font-family: 'Prompt', sans-serif;
+	font-weight: bold;
+	line-height: 20px;
+}
+.scroll-button{
+	height: 220px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	transition: .2s;
+}
+.scroll-button .down{
+	transition: .2s;
+	align-items: flex-end;
+}
+.scroll-button .down:hover{
+	margin-top: 15px;
+}
+@media (max-width: 1500px) {
+	.scroll-button {
+		height: 100px;
+	}
+}
+.scroll-button img{
+	padding: 5px;
+}
+.slider-social{
+	top: 35%;
+	width: 5%;
+	height: 250px;
+	position: absolute;
+	text-align: center;
+}
+.slider-social img{
+	width: 50%;
+	margin: 15px;
+}
+
+/*portfolio*/
+#portfolio{
+	padding: 50px;
+}
+.title-dark{
+	font-family: 'Raleway', sans-serif;
+	font-size: 72px;
+	text-align: center;
+}
+@media (max-width: 600px) {
+	.title-dark {
+		font-size: 44px;
+	}
+}
+.cizgi{
+	width: 30%;
+	margin: 15px;
+}
+.portfolio-item img{
+	width: 100%;
+}
+.card-portfolio{margin: 8px;}
+.card-portfolio img{border-radius: 0px !important;}
+.card-img-overlay{
+	font-family: 'Prompt', sans-serif;
+}
+.portfolio-img {
+	-webkit-transition: all .4s; // Chrome
+	-moz-transition: all .4s; // Mozilla
+	-o-transition: all .4s; // Opera
+	transition: all .4s;
+}
+.card-img-overlay .d-flex-title{
+	justify-content: flex-starts;
+	align-items: flex-start;
+}
+.card-img-overlay .d-flex-link{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+}
+.card-img-overlay h4{
+	color: #fff;
+	padding: 15px;
+}
+.card-img-overlay a{
+	color: #000;
+	background-color: #fff;
+	padding:10px;
+	transition: 0.3s;
+	text-decoration: none;
+	font-weight: bold;
+}
+@media (max-width: 600px) {
+	.card-img-overlay .d-flex-link{
+		height: 200px;
+	}
+}
+.card-img-overlay a:hover{
+	background-color: #000;
+	color: #fff;
+}
+/*project*/
+#project{
+	background-color: #262626;
+	padding: 50px;
+	color:#fff;
+}
+.cizgi{
+	width: 30%;
+}
+.project-item img{
+	width: 100%;
+	padding: 15px;
+}
+.project-item p{
+	text-align: justify;
+}
+.project-content{
+	position: absolute;
+	background-color: red;
+	color: #fff;
+}
+.project-content a{
+	color: #fff;
+	text-decoration: none;
+}
+.project-content .see-more-port{
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	border:1px solid white;
+	padding: 10px;
+	transition: 0.2s;
+}
+.project-content .see-more-port:hover{
+	color:#fff;
+	background-color: #000;
+}
+/*PRODUCT*/
+#product{
+	padding: 50px;
+}
+.cizgi{
+	width: 30%;
+}
+.product-item img{
+	width: 100%;
+}
+.product-item h5{padding-top: 15px;}
+.product-item p{
+	text-align: justify;
+}
+.product-content{
+	position: absolute;
+	background-color: red;
+	color: #fff;
+}
+.product-content a{
+	color: #fff;
+	text-decoration: none;
+}
+.product-content .see-more-port{
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	border:1px solid white;
+	padding: 10px;
+	transition: 0.2s;
+}
+.product-content .see-more-port:hover{
+	color:#fff;
+	background-color: #000;
+}
+/*blog*/
+#blog{
+	padding: 50px;
+}
+.blog-item img{
+	width: 100%;
+	height: 359px;
+	margin-bottom: 20px;
+}
+.blog-img{
+	font-family: 'Prompt', sans-serif;
+	-webkit-transition: all .4s; // Chrome
+	-moz-transition: all .4s; // Mozilla
+	-o-transition: all .4s; // Opera
+	transition: all .4s;
+}
+.blog-overlay:hover{
+	color: #000;
+}
+.blog-overlay h1{
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 52px;
+	text-shadow: 1px 1px black;
+}
+.blog-item .date{
+	font-weight: bold;
+	color:#fff;
+	text-shadow: 1px 1px black;
+}
+.blog-overlay a{
+	color: #000;
+	background-color: #fff;
+	transition: 0.3s;
+	text-decoration: none;
+	font-weight: bold;
+}
+.blog-overlay .flex-text{
+	height: 180px;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+/*footer*/
+footer{
+	background-color: #262626;
+}
+
+footer .partners img{
+	width: 100%;
+	padding: 40px 80px;
+}
+
+.footer-slogan{
+	width: 100%;
+	text-align: center;
+	padding: 100px;
+	color:#fff;
+	font-family: 'Prompt', sans-serif;
+	font-weight: bold;
+}
+.footer-slogan a{
+	background-color: #fff;
+	padding: 10px 55px;
+	font-family: 'Prompt', sans-serif;
+	font-weight: bold;
+	color:#000;
+	text-decoration: none;
+}
+.footer-map{
+	padding: 15px;
+}
+.footer-social{
+	height: 150px;
+	background-color: #b8b8b8;
+	text-align: center;
+	padding-top: 55px;
+}
+.footer-social img{
+	width: 3%;
+	padding-left: 20px;
+}
+@media (max-width: 600px){
+	.footer-social img{
+		width: 10%;
+	}
+	.footer-slogan{
+		padding: 80px 20px;
+	}
+	.footer-slogan a{
+		width: 100%;
+	}
+	footer .partners{
+		width: 70% !important;
+		margin-left: 15%;
+	}
+}
