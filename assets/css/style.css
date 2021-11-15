@@ -55,8 +55,8 @@ Designed by Hüseyin Altıntop
 	}
 	.collapse a{margin: 10px;}
 	.collapse a:hover{
-	border-bottom: 1px solid white;
-}
+		border-bottom: 1px solid white;
+	}
 }
 .navbar{
 	padding: 15px;
@@ -277,13 +277,22 @@ Designed by Hüseyin Altıntop
 	font-family: 'Raleway', sans-serif;
 	color: #fff;
 	font-weight: bold;
-	font-size: 52px;
 	text-shadow: 1px 1px black;
 }
 .blog-item .date{
 	font-weight: bold;
 	color:#fff;
 	text-shadow: 1px 1px black;
+}
+.blog-overlay{
+	flex-direction: column;
+}
+.blog-overlay .flex-text{
+	height: 100%;
+	margin-bottom: 25px;
+}
+.blog-overlay .d-flex{
+	align-items: flex-end;
 }
 .blog-overlay a{
 	color: #000;
@@ -292,12 +301,6 @@ Designed by Hüseyin Altıntop
 	text-decoration: none;
 	font-weight: bold;
 }
-.blog-overlay .flex-text{
-	height: 180px;
-	justify-content: center;
-	align-items: flex-end;
-}
-
 /*footer*/
 footer{
 	background-color: #262626;

@@ -1,9 +1,58 @@
+<?php
+include 'baglan.php';
+include 'function.php';
+
+//ayarlar
+$ayarsor =$db->prepare("SELECT * FROM ayar_tbl WHERE ayar_id=?");
+$ayarsor->execute(array(0));
+$ayarcek=$ayarsor->fetch(PDO::FETCH_ASSOC);
+//ayarlar son
+
+//Menüler
+$menusor =$db->prepare("SELECT * FROM menu_tbl WHERE menu_ust=0 ORDER BY menu_sira");
+$menusor->execute(array(0));
+//Menüler son
+
+//altmenü
+$altmenusor =$db->prepare("SELECT * FROM menu_tbl WHERE menu_ust=:menu_id AND menu_sayfa = 0");
+//altmenüson
+
+//sayfamenu sor
+$sayfamenusor =$db->prepare("SELECT * FROM menu_tbl WHERE menu_ust != 0 AND menu_sayfa != 0");
+$sayfamenusor->execute(array(0));
+//sayfamenuson
+
+//menü urunler
+$urunler=$db->prepare("SELECT * FROM urunler_tbl");
+$urunler->execute(array(0));
+//son
+
+//menü kategoriler
+$kategoriler=$db->prepare("SELECT * FROM kategori_tbl");
+$kategoriler->execute(array(0));
+//son
+
+//menü hizmetler
+$hizmetler=$db->prepare("SELECT * FROM hizmetler_tbl");
+$hizmetler->execute(array(0));
+//son
+
+//Butonlar
+$randevual=$db->prepare("SELECT * FROM butonlar_tbl WHERE buton_adi LIKE '%randevu%'");
+$randevual->execute(array(0));
+$randevualbuton=$randevual->fetch(PDO::FETCH_ASSOC);
+
+$whatsappbuton=$db->prepare("SELECT * FROM butonlar_tbl WHERE buton_adi LIKE '%whatsapp%'");
+$whatsappbuton->execute(array(0));
+$whatsapp=$whatsappbuton->fetch(PDO::FETCH_ASSOC);
+//Butonlar son
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<!-- Basic Page Needs -->
 	<meta charset="utf-8">
-	<title>Hüseyin Altıntop</title>
+	<title><?=$ayarcek['ayar_title']?></title>
 	<meta name="description" content="<?=$ayarcek['ayar_desc']?>">
 	<meta name="keywords" content="<?=$ayarcek['ayar_key']?>">
 	<meta name="author" content="<?=$ayarcek['ayar_author']?>">
@@ -35,33 +84,19 @@
 		<!--Navbar-->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" width="200"></a>
+				<a class="navbar-brand" href="<?=$ayarcek['ayar_siteurl']?>"><img src="<?=$ayarcek['ayar_logo']?>" width="200"></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.php">ANASAYFA</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.php">HAKKIMDA</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="portfolio.php">PORTFOLYO</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php#project">PROJELER</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="products.php">ÜRÜNLER</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="blog.php">BLOG</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php#contact">İLETİŞİM</a>
-						</li>
+						<?php foreach ($menusor as $menu): ?>
+							<?php if ($menu['menu_url']!='' && $menu['menu_sayfa']==0): ?>
+								<li class="nav-item active">
+									<a class="nav-link" href="<?=$menu['menu_url']?>"><?=$menu['menu_ad']?></a>
+								</li>
+							<?php endif; ?>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 			</div>
