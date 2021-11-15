@@ -62,7 +62,7 @@ $kategoriso1->execute();
 						$hizmet_id=$hizmetcek['hizmet_id'];
 						?>
 						<tr>
-							<td class="text-center"><img style="width: 50%;" src="../<?=$hizmetcek['hizmet_icon']; ?>"></td>
+							<td class="text-center"><img style="width: 50%;" src="../<?=$hizmetcek['hizmet_foto']; ?>"></td>
 							<td style="width:16%;"><?=$hizmetcek['hizmet_ad']; ?></td>
 							<?php $kategoricek=$kategorisor->fetch(PDO::FETCH_ASSOC); ?>
 							<td style="width:16%;"><?=$kategoricek['kategori_ad']; ?></td>

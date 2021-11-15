@@ -1,0 +1,14 @@
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^http://localhost/huseyin/index.php [NC]
+#RewriteRule ^(.*)$ http://localhost/huseyin/index.php$1 [L,R=301,NC]
+
+ErrorDocument 404 http://localhost/huseyin/404.php
+
+RewriteRule ^anasayfa$ index.php [NC,L]
+RewriteRule ^hakkimda$ about.php [NC,L]
+RewriteRule ^portfolyo$ portfolio.php [NC,L]
+RewriteRule ^projeler$ project.php [NC,L]
+RewriteRule ^urunler$ products.php [NC,L]
+RewriteRule ^blog$ blog.php [NC,L]
+RewriteRule ^iletisim$ contact.php [NC,L]

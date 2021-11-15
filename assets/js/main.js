@@ -1,6 +1,6 @@
 var path = window.location.pathname.split('/')[2]
 
-if (path === "index.php" || path === "anasayfa" || path === "home") {
+if (path === "index.php" || path === "anasayfa" || path === "home" || path == "") {
 	$(document).ready(function() {
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
