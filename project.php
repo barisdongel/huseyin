@@ -3,7 +3,7 @@ $projesor=$db->prepare("SELECT * FROM hizmetler_tbl");
 $projesor->execute(array(0));
 ?>
 	<!--Blog-->
-	<section id="blog" class="mt-5">
+	<section id="blog" class="m-150">
 		<div class="container">
 			<div class="container-fluid">
 				<div class="row">
