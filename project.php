@@ -21,9 +21,11 @@ $projesor->execute(array(0));
 												<div class="d-flex-title">
 													<h1><?=$rows['hizmet_ad']?></h1>
 												</div>
+<!--
 												<div class="flex-text d-flex">
 													<a href="project?hizmet_id=<?=$rows['hizmet_id']?>" class="card-text d-none">Daha Fazlasını Gör</a>
 												</div>
+-->
 											</div>
 										</div>
 									</div>

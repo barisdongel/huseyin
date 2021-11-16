@@ -23,7 +23,7 @@ $blogsor->execute(array(0));
 												</div>
 												<span class="date"><?=$rows['blog_tarih']?></span>
 												<div class="flex-text d-flex">
-													<a href="blog?blog_id=<?=$rows['blog_id']?>" class="card-text d-none">Daha Fazlasını Gör</a>
+													<a href="blog-detail.php?blog_id=<?=$rows['blog_id']?>" class="card-text d-none">Daha Fazlasını Gör</a>
 												</div>
 											</div>
 										</div>

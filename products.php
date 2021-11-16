@@ -23,9 +23,11 @@ $urunsor->execute(array(0));
 											<div class="d-flex d-flex-title">
 												<h4><?=$rows['urun_ad']?></h4>
 											</div>
+<!--
 											<div class="d-flex d-flex-link d-none">
 												<a href="products?urun_id=<?=$rows['urun_id']?>" class="card-text">Daha Fazlasını Gör</a>
 											</div>
+-->
 										</div>
 									</div>
 								</div>
